@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Problem 1</title>
+	<style>
+		body{
+			margin:0;
+			font-family: Tahoma;
+		}
+		.area {
+			max-width: 1140px;
+			width: 100%;
+			margin: auto;
+			background: #F2F2F2;
+			padding: 30px 50px;
+			border: 1px solid #4473C5;
+		}
+		.inputBox input {
+			width: 300px;
+			border: 1px solid #000;
+			padding: 9px 20px;
+			font-weight: bold;
+			font-size: 16px;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		.inputBox button {
+			width: 300px;
+			padding: 10px 20px;
+			font-weight: bold;
+			border: 1px solid blue;
+			background: #4473C5;
+			color: #FFF;
+			display: block;
+			margin-top: 15px;
+			margin-bottom: 20px;
+			cursor: pointer;
+		}
+		.sinlgeLetter {
+			width: 20px;
+			border: 1px solid #000;
+			padding: 6px 10px;
+			font-weight: bold;
+			font-size: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="area">
+		<div class="inputBox">
+			<input type="text" placeholder="Enter Person Name" id="inputText">
+			<button  id="submitText" onclick="OutpurText()" >Fill Below Box</button>
+		</div> 
+		<div id="output-box">
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly> 
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+			<input type="text" class="sinlgeLetter" readonly>
+		</div>
+	</div>
+
+	
+
+	<script>
+		function OutpurText(){
+			var allText = document.getElementById('inputText').value;  
+			var sinlgeLetter =  document.getElementsByClassName('sinlgeLetter'); 
+			var AllLetter = allText.split('');  
+			for(var i=0;i < AllLetter.length ;i++){
+               sinlgeLetter[i].value = AllLetter[i]
+			}
+		}
+		 
+	</script>
+</body>
+</html>
